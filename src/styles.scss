@@ -1,5 +1,11 @@
 /* Add application styles & imports to this file! */
 
+$blue-color:#1D72F3;
+$green-color:#2BDE3F;
+$yellow-color:#FFC007;
+$red-color:red;
+
+
 html, body{
 /*   font-family: 'Raleway', sans-serif; */
   line-height: 1.15;
@@ -7,8 +13,6 @@ html, body{
   width:100%;
   height:100%;
 }
-
-
 
 
 .toast_container{
@@ -85,37 +89,36 @@ html, body{
 
 
 .toast-green .toast_icon{
-  background-color:#2BDE3F;
+  background-color:$green-color;
 }
 
 .toast-green{
-  border-left: 4px solid #2BDE3F;
+  border-left: 4px solid $green-color;
 }
 
 .toast-blue .toast_icon{
-  background-color:#1D72F3;
+  background-color:$blue-color;
 }
 
 .toast-blue{
 /*   background-color:#1D72F3; */
-   border-left: 4px solid #1D72F3;
+   border-left: 4px solid $blue-color;
 }
 
 .toast-yellow .toast_icon{
-  background-color:#FFC007;
+  background-color:$yellow-color;
 }
 
 .toast-yellow{
-  border-left: 4px solid #FFC007;
+  border-left: 4px solid $yellow-color;
 }
 
-
 .toast-red .toast_icon{
-  background-color:red;
+  background-color:$red-color;
 }
 
 .toast-red{
-  border-left: 4px solid red;
+  border-left: 4px solid $red-color;
 }
 
 
@@ -130,18 +133,16 @@ html, body{
 
 
 .toast-green .toaster_progress{
-  background-color:#2BDE3F;
+  background-color:lighten( $green-color, 20% )
 }
-
-
 
 .toast-blue .toaster_progress{
-  background-color:#1D72F3;
+  background-color:lighten( $blue-color, 20% );
 }
 .toast-yellow .toaster_progress{
-   background-color:#FFC007;
+   background-color:lighten( $yellow-color, 20% )
 }
 
 .toast-red .toaster_progress{
-  background-color:red;
+  background-color:lighten( $red-color, 20% )
 }
