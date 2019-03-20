@@ -12,7 +12,7 @@
       <p class="toast_message">{{message.content}}</p>
     </div> 
 
-    <div class="toast_close" [innerHtml]='_SVGProvider.close | sanitizeHtml' (click)="dismiss(i)"></div> 
+    <div class="toast_close" [innerHtml]='_SVGProvider.close | sanitizeHtml' (click)="dismiss(message.timestamp)"></div> 
 
     <div class='toaster_progress' [ngStyle]="{'width':(message.counter/message.delay) * 100 + '%'}" 
       [ngClass]="{'toast-blue':   message.style=='info',

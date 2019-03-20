@@ -20,8 +20,8 @@ export class ToastComponent implements OnInit {
     this.messages = this.toastProvider.getMessages()
   }
 
-  dismiss(index) {
-    this.toastProvider.dismissMessage(index)
+  dismiss(id) {
+    this.toastProvider.dismissMessage(id)
   }
 
 }
