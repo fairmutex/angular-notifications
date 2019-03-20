@@ -12,9 +12,9 @@ export class ToastComponent implements OnInit {
   messages: any;
 
   constructor(private toastProvider: ToastProvider,
-                 public _SVGProvider:SVGProvider) { 
+    public _SVGProvider: SVGProvider) {
 
-                 }
+  }
 
   ngOnInit() {
     this.messages = this.toastProvider.getMessages()

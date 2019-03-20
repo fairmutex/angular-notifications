@@ -7,17 +7,17 @@ import { SVGProvider } from './providers/svg.provider';
 
 import { ToastProvider } from './toast/toast.provider';
 import { ToastComponent } from './toast/toast.component';
-import {SanitizeHtmlPipe} from './pipes/sanitizeHtml.pipe';
+import { SanitizeHtmlPipe } from './pipes/sanitizeHtml.pipe';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ 
+  imports: [BrowserModule, FormsModule],
+  declarations: [
     AppComponent,
-    SanitizeHtmlPipe, 
+    SanitizeHtmlPipe,
     ToastComponent,
-    ],
-  bootstrap:    [ AppComponent ],
+  ],
+  bootstrap: [AppComponent],
   providers: [
-     SVGProvider,
-     ToastProvider]
+    SVGProvider,
+    ToastProvider]
 })
 export class AppModule { }
