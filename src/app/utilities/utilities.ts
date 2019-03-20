@@ -1,8 +1,8 @@
- class Utilities {
+ export class Utilities {
 
- static types: Array<string> = ['success', 'danger', 'warning', 'info', 'primary', 'secondary', 'dark', 'light'];
+ static types: Array<string> = ['success', 'danger', 'caution', 'info'];
  
  static randomType() {
-    return this.types[Math.ceil((Math.random() * 8)) % this.types.length];
+    return this.types[Math.ceil((Math.random() * 4)) % this.types.length];
   }
 }

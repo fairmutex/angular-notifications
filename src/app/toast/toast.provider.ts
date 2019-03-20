@@ -30,9 +30,9 @@ export class ToastProvider {
      this.list.push(message);
 
      // Remove old notifications if exeeding 4
-     if(this.list.length > 4){
-        this.dismissMessage(this.list[0].timestamp);
-     }
+    //  if(this.list.length > 4){
+    //     this.dismissMessage(this.list[0].timestamp);
+    //  }
           
     // Remove item after it expires
     setTimeout(()=>{

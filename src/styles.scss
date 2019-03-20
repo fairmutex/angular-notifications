@@ -110,6 +110,15 @@ html, body{
 }
 
 
+.toast-red .toast_icon{
+  background-color:red;
+}
+
+.toast-red{
+  border-left: 4px solid red;
+}
+
+
 .toaster_progress{
   margin-top:18px;
   display:absolute;
@@ -117,5 +126,22 @@ html, body{
   height:3px;
   /* width:50%; */
   width:0%;
-  background-color:green;
+}
+
+
+.toast-green .toaster_progress{
+  background-color:#2BDE3F;
+}
+
+
+
+.toast-blue .toaster_progress{
+  background-color:#1D72F3;
+}
+.toast-yellow .toaster_progress{
+   background-color:#FFC007;
+}
+
+.toast-red .toaster_progress{
+  background-color:red;
 }

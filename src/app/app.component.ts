@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ToastProvider } from './toast/toast.provider';
 
+import {Utilities} from './utilities/utilities';
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -11,7 +13,7 @@ export class AppComponent  {
   
   constructor(private toastProvider: ToastProvider){
     const message = "I have some useful information for you...";
-    this.toastProvider.sendMessage(message, 'info',100000);
+    this.toastProvider.sendMessage(message, 'danger',100000);
 
 
   }
@@ -38,6 +40,6 @@ export class AppComponent  {
 
   randomMessage() {
   const message = "Random Message";
-  this.toastProvider.sendMessage(message, 'info');
+  this.toastProvider.sendMessage(message, Utilities.randomType());
 }
 }

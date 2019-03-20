@@ -18,7 +18,11 @@
 
 
 <div class="toast_container">
-  <div  *ngFor="let message of (messages | async); let i = index" class="toast toast-blue">
+  <div  *ngFor="let message of (messages | async); let i = index" class="toast"
+           [ngClass]="{'toast-blue':     message.style=='info',
+                     'toast-yellow':   message.style=='caution',
+                      'toast-red':   message.style=='danger',
+                     'toast-green':  message.style=='success'}">
     
  <!-- <div  class="toast_icon" [innerHtml]='_SVGProvider.infoIcon | sanitizeHtml'></div> -->
  <div  class="toast_icon" [innerHtml]='_SVGProvider.getIcon(message.style) | sanitizeHtml'></div>
@@ -30,8 +34,10 @@
  <div class="toast_close" [innerHtml]='_SVGProvider.close | sanitizeHtml' (click)="dismiss(i)">
 
    </div> 
-  <div class='toaster_progress' [ngStyle]="{'width':(message.counter/message.delay) * 100 + '%'}"></div> 
+  <div class='toaster_progress' [ngStyle]="{'width':(message.counter/message.delay) * 100 + '%'}"           [ngClass]="{'toast-blue':     message.style=='info',
+                     'toast-yellow':   message.style=='caution',
+                      'toast-red':   message.style=='danger',
+                     'toast-green':  message.style=='success'}"></div> 
   </div>   
 
 </div>    
-<!-- {{_SVGProvider.closeIcon}} -->
