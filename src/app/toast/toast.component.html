@@ -1,0 +1,37 @@
+<!-- <div class="toast_container">
+  <div class="toast_cell">
+  <aside  *ngFor="let message of (messages | async); let i = index">
+  
+    <div class="notification"
+
+         [ngClass]="{'is-info':     message.style=='info',
+                     'is-danger':   message.style=='danger',
+                     'is-success':  message.style=='success'}">
+
+      <button class="delete" (click)="dismiss(i)"></button>
+      {{message.content}} : {{message.timestamp}}
+    </div>
+
+  </aside>
+  </div>
+</div> -->
+
+
+<div class="toast_container">
+  <div  *ngFor="let message of (messages | async); let i = index" class="toast toast-blue">
+    
+ <!-- <div  class="toast_icon" [innerHtml]='_SVGProvider.infoIcon | sanitizeHtml'></div> -->
+ <div  class="toast_icon" [innerHtml]='_SVGProvider.getIcon(message.style) | sanitizeHtml'></div>
+ 
+       <div class="toast_content">
+    <p class="toast_title">Info</p>
+    <p class="toast_message">{{message.content}}</p>
+    </div> 
+ <div class="toast_close" [innerHtml]='_SVGProvider.close | sanitizeHtml' (click)="dismiss(i)">
+
+   </div> 
+  <div class='toaster_progress' [ngStyle]="{'width':(message.counter/message.delay) * 100 + '%'}"></div> 
+  </div>   
+
+</div>    
+<!-- {{_SVGProvider.closeIcon}} -->
