@@ -39,7 +39,7 @@ export class AppComponent {
   }
 
   randomMessage() {
-    const message = Utilities.getRandomString(5);
-    this.toastProvider.sendMessage(message, Utilities.randomType());
+    const message = Utilities.getRandomString(5); 
+    this.toastProvider.sendMessage(message, Utilities.randomType(), Utilities.getRandomSeconds());
   }
 }
