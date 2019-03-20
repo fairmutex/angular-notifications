@@ -29,13 +29,13 @@ export class AppComponent {
   }
 
   cautionMessage() {
-    const message = "Caution Message";
-    this.toastProvider.sendMessage(message, 'caution');
+    const message = "Warning Message";
+    this.toastProvider.sendMessage(message, 'warning');
   }
 
   dangerMessage() {
-    const message = "Danger Message";
-    this.toastProvider.sendMessage(message, 'danger');
+    const message = "Error Message";
+    this.toastProvider.sendMessage(message, 'error');
   }
 
   randomMessage() {

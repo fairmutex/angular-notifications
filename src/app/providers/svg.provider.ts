@@ -41,7 +41,7 @@ close =`
     </svg>
   `;
 
-      caution =`
+      warning =`
 <svg version="1.1" class="toast_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 301.691 301.691" style="enable-background:new 0 0 301.691 301.691;" xml:space="preserve">
 <g>
 	<polygon points="119.151,0 129.6,218.406 172.06,218.406 182.54,0  "></polygon>
@@ -51,7 +51,7 @@ close =`
   `;
 
 
-danger =`
+error =`
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" enable-background="new 0 0 30 24" xml:space="preserve">  <image id="image0" 
     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ

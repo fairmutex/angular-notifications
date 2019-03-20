@@ -1,8 +1,8 @@
 <div class="toast_container">
   <div class="toast" *ngFor="let message of (messages | async); let i = index" 
     [ngClass]="{'toast-blue':   message.style=='info',
-                'toast-yellow': message.style=='caution',
-                'toast-red':    message.style=='danger',
+                'toast-yellow': message.style=='warning',
+                'toast-red':    message.style=='error',
                 'toast-green':  message.style=='success'}">
     
     <div  class="toast_icon" [innerHtml]='_SVGProvider.getIcon(message.style) | sanitizeHtml'></div>
@@ -16,8 +16,8 @@
 
     <div class='toaster_progress' [ngStyle]="{'width':(message.counter/message.delay) * 100 + '%'}" 
       [ngClass]="{'toast-blue':   message.style=='info',
-                  'toast-yellow': message.style=='caution',
-                  'toast-red':    message.style=='danger',
+                  'toast-yellow': message.style=='warning',
+                  'toast-red':    message.style=='error',
                   'toast-green':  message.style=='success'}">
     </div> 
   </div>   
