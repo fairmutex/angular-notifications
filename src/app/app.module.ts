@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { SVGProvider } from './providers/svg.provider';
 
 import { ToastProvider } from './toast/toast.provider';
@@ -14,8 +13,7 @@ import {SanitizeHtmlPipe} from './pipes/sanitizeHtml.pipe';
   declarations: [ 
     AppComponent,
     SanitizeHtmlPipe, 
-    ToastComponent, 
-    HelloComponent 
+    ToastComponent,
     ],
   bootstrap:    [ AppComponent ],
   providers: [
