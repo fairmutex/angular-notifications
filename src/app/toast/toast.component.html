@@ -1,43 +1,24 @@
-<!-- <div class="toast_container">
-  <div class="toast_cell">
-  <aside  *ngFor="let message of (messages | async); let i = index">
-  
-    <div class="notification"
-
-         [ngClass]="{'is-info':     message.style=='info',
-                     'is-danger':   message.style=='danger',
-                     'is-success':  message.style=='success'}">
-
-      <button class="delete" (click)="dismiss(i)"></button>
-      {{message.content}} : {{message.timestamp}}
-    </div>
-
-  </aside>
-  </div>
-</div> -->
-
-
 <div class="toast_container">
-  <div  *ngFor="let message of (messages | async); let i = index" class="toast"
-           [ngClass]="{'toast-blue':     message.style=='info',
-                     'toast-yellow':   message.style=='caution',
-                      'toast-red':   message.style=='danger',
-                     'toast-green':  message.style=='success'}">
+  <div class="toast" *ngFor="let message of (messages | async); let i = index" 
+    [ngClass]="{'toast-blue':   message.style=='info',
+                'toast-yellow': message.style=='caution',
+                'toast-red':    message.style=='danger',
+                'toast-green':  message.style=='success'}">
     
- <!-- <div  class="toast_icon" [innerHtml]='_SVGProvider.infoIcon | sanitizeHtml'></div> -->
- <div  class="toast_icon" [innerHtml]='_SVGProvider.getIcon(message.style) | sanitizeHtml'></div>
+    <div  class="toast_icon" [innerHtml]='_SVGProvider.getIcon(message.style) | sanitizeHtml'></div>
  
-       <div class="toast_content">
-    <p class="toast_title">Info</p>
-    <p class="toast_message">{{message.content}}</p>
+    <div class="toast_content">
+      <p class="toast_title">{{message.style | titlecase }}</p>
+      <p class="toast_message">{{message.content}}</p>
     </div> 
- <div class="toast_close" [innerHtml]='_SVGProvider.close | sanitizeHtml' (click)="dismiss(i)">
 
-   </div> 
-  <div class='toaster_progress' [ngStyle]="{'width':(message.counter/message.delay) * 100 + '%'}"           [ngClass]="{'toast-blue':     message.style=='info',
-                     'toast-yellow':   message.style=='caution',
-                      'toast-red':   message.style=='danger',
-                     'toast-green':  message.style=='success'}"></div> 
+    <div class="toast_close" [innerHtml]='_SVGProvider.close | sanitizeHtml' (click)="dismiss(i)"></div> 
+
+    <div class='toaster_progress' [ngStyle]="{'width':(message.counter/message.delay) * 100 + '%'}" 
+      [ngClass]="{'toast-blue':   message.style=='info',
+                  'toast-yellow': message.style=='caution',
+                  'toast-red':    message.style=='danger',
+                  'toast-green':  message.style=='success'}">
+    </div> 
   </div>   
-
 </div>    

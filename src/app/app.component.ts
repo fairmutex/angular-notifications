@@ -6,16 +6,16 @@ import {Utilities} from './utilities/utilities';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent  {
   name = 'Notifications System';
   
   constructor(private toastProvider: ToastProvider){
-    const message = "I have some useful information for you...";
-    this.toastProvider.sendMessage(message, 'danger',100000);
-
-
+      this.randomMessage();
+      this.randomMessage();
+      this.randomMessage();
+      this.randomMessage();
   }
 
   infoMessage() {
@@ -39,7 +39,7 @@ export class AppComponent  {
 }
 
   randomMessage() {
-  const message = "Random Message";
+  const message = Utilities.getRandomString(5);
   this.toastProvider.sendMessage(message, Utilities.randomType());
 }
 }
