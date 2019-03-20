@@ -1,6 +1,6 @@
-# angular-87cpeb
+# angular-2-7-notifications
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-87cpeb)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-2-7-notifications)
 
 
 Simple Notifications for Angular 2+
